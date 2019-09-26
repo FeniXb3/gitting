@@ -28,11 +28,15 @@ def decrypt(text, s):
     return result
 
 
-text = "CEASER CIPHER DEMO"
+text = input("Please insert text to encrypt")
+
+#  text = "CEASER CIPHER DEMO"
 s = 4
 
 print("Plain Text : " + text)
 print("Shift pattern : " + str(s))
 print("Cipher: " + encrypt(text, s))
 
-print("Decipher: " + decrypt(encrypt(text, s), s))
+question = input("Do you decript message?[Y/N]")
+if (question == "Y"):
+    print("Decipher: " + decrypt(encrypt(text, s), s))
